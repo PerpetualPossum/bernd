@@ -1,0 +1,21 @@
+[project]
+name = "bernd"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Viv",email = "140846346+PerpetualPossum@users.noreply.github.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "discord-py (>=2.5.2,<3.0.0)",
+    "googletrans (>=4.0.2,<5.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "bernd"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
