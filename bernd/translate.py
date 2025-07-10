@@ -6,9 +6,9 @@ async def translate_from_german(text: str) -> list[str]:
     Translate text that may contain german words to English.
     """
 
-    words = text.split()
+    words = text.lower().split()
     print(f"Words to check: {words}")
-    translated_words = []
+    translated_words: list[str] = []
     to_return = []
     async with Translator() as translator:
         for word in words:
@@ -26,8 +26,8 @@ async def translate_from_german(text: str) -> list[str]:
 
     # Remove duplicates while preserving order
     for word in translated_words:
-        if word not in words:
+        if word.lower() not in words:
             to_return.append(word)
 
     print(f"Final translated words: {to_return}")
-    return translated_words
+    return to_return
