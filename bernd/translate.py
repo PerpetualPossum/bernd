@@ -90,7 +90,7 @@ async def no_context_translate(text: str) -> list[str]:
         for word in words:
             try:
                 lang = await translator.detect(word)
-                if lang.lang == "de":
+                if lang.lang != "en":
                     translation = await translator.translate(word, dest="en", src="de")
                     to_return.append(translation.text)
                 else:
