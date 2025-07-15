@@ -10,3 +10,7 @@ primary_region = 'den'
 
 [[vm]]
   size = 'shared-cpu-1x'
+
+[mounts]
+  source = "db_data"
+  destination = "/data"

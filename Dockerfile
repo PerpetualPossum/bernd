@@ -6,6 +6,7 @@ WORKDIR /app
 
 COPY pyproject.toml poetry.lock ./
 COPY bernd ./bernd
+COPY migrations ./migrations
 RUN touch README.md
 
 RUN poetry install
