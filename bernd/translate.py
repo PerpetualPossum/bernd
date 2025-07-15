@@ -7,7 +7,7 @@ def random_langcode() -> str:
     """
     Get a random language code from the LANGCODES dictionary.
     """
-    lang_code = random.choice(list(LANGCODES.keys()))
+    lang_code = random.choice(list(LANGCODES.values()))
     print(f"Random language code selected: {lang_code}")
     return lang_code
 
