@@ -89,6 +89,8 @@ async def on_ready():
 async def on_message(message: discord.Message):
     if message.author == client.user:
         return
+    if message.author.bot:
+        return
     if not message.guild or not message.guild.id:
         return
     try:
